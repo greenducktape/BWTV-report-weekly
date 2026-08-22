@@ -1,0 +1,29 @@
+{
+  "_comment": "Zentrale Konfiguration des Dashboards. Für einen anderen Kunden nur diese Datei anpassen (und das Logo in assets/ austauschen) - die Skripte bleiben unverändert.",
+  "brand": {
+    "name": "Social Media Dashboard",
+    "subtitle": "Facebook & Instagram · Baden-Württemberg Triathlon-Verband",
+    "footer": "BWTV",
+    "footerLong": "Baden-Württemberg Triathlon-Verband",
+    "logo": "assets/bwtv-liga-white.svg",
+    "logoFallback": "BWTV"
+  },
+  "source": {
+    "name": "Metricool",
+    "brandId": 6061560
+  },
+  "theme": {
+    "headerFrom": "#17102b",
+    "headerVia": "#241634",
+    "headerTo": "#2f1a3a",
+    "rule": ["#d6246e", "#00adeb", "#f18d5a"],
+    "accent": "#00adeb"
+  },
+  "networks": {
+    "facebook": { "label": "Facebook", "color": "#0866ff" },
+    "instagram": { "label": "Instagram", "color": "#d6246e" }
+  },
+  "notes": [
+    "Am 20.07.2026 sprang der Instagram-Followerstand von 2.952 auf 4.980. Das war kein organisches Wachstum; der seitdem laufende Abbau ist Normalisierung."
+  ]
+}

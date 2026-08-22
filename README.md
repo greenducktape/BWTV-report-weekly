@@ -9,18 +9,29 @@ Netzwerkzugriffe — sie funktioniert auch offline.
 
 ## Aufbau der Seite
 
-1. **Wöchentlicher Report** — der laufende Monat bis zum aktuellen Datenstand,
-   verglichen mit demselben Zeitraum des Vormonats (gleiche Zeitraumlänge und
-   -position, damit der Vergleich fair ist).
-2. **Entwicklung** — Verlauf umschaltbar zwischen Kalenderwochen und Monaten,
-   für Aufrufe, Interaktionen, Beiträge, Follower, Reichweite und Profilaufrufe.
-   Facebook und Instagram liegen in getrennten Panels mit eigener Skala.
-3. **Monatsarchiv** — jeder Monat einzeln abrufbar, jeweils gegen den Vormonat.
+1. **Kernaussage** — was die Zahlen in einem Satz sagen, mit den Belegen darunter.
+   Der Text wird aus den Daten erzeugt und trennt bewusst *Menge* (wie viel wurde
+   veröffentlicht) von *Wirkung* (was ein einzelner Beitrag bringt).
+2. **Hero-Kennzahlen** — Aufrufe, Interaktionen, Follower und Beiträge mit
+   Veränderung zum Vormonat, Aufteilung je Kanal und Sparkline der letzten 6 Monate.
+3. **Wirkung je Beitrag** — Aufrufe und Interaktionen je Beitrag. Die wichtigste
+   Ergänzung: Summen hängen davon ab, wie viel gepostet wurde. Erst diese Werte
+   zeigen, ob Inhalte besser oder schlechter funktionieren.
+4. **Verlauf** — umschaltbar zwischen Kalenderwochen und Monaten, für Aufrufe,
+   Aufrufe je Beitrag, Interaktionen, Beiträge, Follower, Reichweite und
+   Profilaufrufe. Facebook und Instagram in getrennten Panels mit eigener Skala.
+5. **Details** — vollständige Kennzahlentabelle je Kanal.
+6. **Monatsarchiv** — jeder Monat einzeln abrufbar, jeweils gegen den Vormonat.
+
+Der laufende Monat wird immer gegen **denselben Zeitraum des Vormonats** gestellt
+(gleiche Länge, gleiche Position), nicht gegen den vollen Vormonat — sonst
+vergleicht man einen halben Monat mit einem ganzen.
 
 ## Verzeichnisse
 
 ```
 ├── index.html                  Das Dashboard (generiert – nicht manuell bearbeiten)
+├── config.json                 Marke, Farben, Logo, Kanäle  ← für neue Kunden anpassen
 ├── vercel.json                 Deploy-Konfiguration (statisch, kein Build)
 ├── data/
 │   ├── metricool_daily.json    Tageswerte aus Metricool – die laufende Quelle
@@ -62,6 +73,21 @@ python3 scripts/progress.py             # je Kalenderwoche
 python3 scripts/progress.py --monthly   # je Monat
 python3 scripts/progress.py --meta      # Meta-Exporte März–Juli
 ```
+
+## Für einen anderen Kunden verwenden
+
+Die Skripte enthalten nichts Kundenspezifisches. Für ein neues Dashboard reicht:
+
+1. `config.json` anpassen — Name, Untertitel, Footer, Farben, Kanalfarben und die
+   Metricool-Brand-ID.
+2. Logo nach `assets/` legen und in `config.json` unter `brand.logo` eintragen
+   (relativer Pfad, wird als Data-URI eingebettet). Ohne Logo wird
+   `brand.logoFallback` als Schriftzug gesetzt.
+3. `data/metricool_daily.json` leeren und mit den Daten der neuen Brand füllen.
+4. `python3 scripts/build_site.py`
+
+Die Kernaussage, die Kennzahlen und alle Diagramme passen sich automatisch an.
+Getestet mit einer abweichenden Marke und Farbpalette.
 
 ## Kennzahlen
 
