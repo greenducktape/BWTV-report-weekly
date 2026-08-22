@@ -16,14 +16,34 @@
     "headerFrom": "#17102b",
     "headerVia": "#241634",
     "headerTo": "#2f1a3a",
-    "rule": ["#d6246e", "#00adeb", "#f18d5a"],
+    "rule": [
+      "#d6246e",
+      "#00adeb",
+      "#f18d5a"
+    ],
     "accent": "#00adeb"
   },
   "networks": {
-    "facebook": { "label": "Facebook", "color": "#0866ff" },
-    "instagram": { "label": "Instagram", "color": "#d6246e" }
+    "facebook": {
+      "label": "Facebook",
+      "color": "#0866ff"
+    },
+    "instagram": {
+      "label": "Instagram",
+      "color": "#d6246e"
+    }
   },
   "notes": [
     "Am 20.07.2026 sprang der Instagram-Followerstand von 2.952 auf 4.980. Das war kein organisches Wachstum; der seitdem laufende Abbau ist Normalisierung."
-  ]
+  ],
+  "publish": {
+    "publicUrl": "https://bwtv-report-weekly.vercel.app",
+    "repo": "https://github.com/greenducktape/BWTV-report-weekly"
+  },
+  "notify": {
+    "_comment": "Die Webhook-URL ist ein Geheimnis und steht NICHT hier. Sie kommt aus der Umgebungsvariable REPORT_WEBHOOK_URL oder aus .secrets/webhook_url (beides nicht im Repo).",
+    "enabled": true,
+    "channelLabel": "Chanty",
+    "emoji": "📊"
+  }
 }

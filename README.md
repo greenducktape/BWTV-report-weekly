@@ -32,6 +32,7 @@ vergleicht man einen halben Monat mit einem ganzen.
 ```
 ├── index.html                  Das Dashboard (generiert – nicht manuell bearbeiten)
 ├── config.json                 Marke, Farben, Logo, Kanäle  ← für neue Kunden anpassen
+├── .secrets/                   Webhook-URL (nicht im Repository)
 ├── vercel.json                 Deploy-Konfiguration (statisch, kein Build)
 ├── data/
 │   ├── metricool_daily.json    Tageswerte aus Metricool – die laufende Quelle
@@ -44,14 +45,21 @@ vergleicht man einen halben Monat mit einem ganzen.
     ├── generate_report.py      Datenspeicher → Wochenreport (einzelne KW)
     ├── progress.py             Wochen-/Monatsübersicht im Terminal
     ├── publish.py              Bauen, committen, nach main pushen
+    ├── notify.py               Kurznachricht an den Webhook (Zapier → Chanty)
     └── backfill_meta_history.py   Historie aus den Meta-Exporten (einmalig)
 ```
 
-## Wöchentlicher Ablauf
+## Automatischer Ablauf
 
-Läuft automatisch **montags um 9:05** über die geplante Aufgabe
-`bwtv-wochenreport`: Daten holen → einlesen → Dashboard bauen → nach `main`
-pushen. Vercel deployt den neuen Stand automatisch.
+Zwei geplante Läufe pro Woche:
+
+| Wann | Aufgabe | Was passiert |
+|---|---|---|
+| **Montag 9:05** | `bwtv-wochenreport` | Daten holen → einlesen → Dashboard bauen → nach `main` pushen |
+| **Freitag 8:00** | `bwtv-report-freitag` | dasselbe **plus** Benachrichtigung an Chanty |
+
+Vercel deployt nach jedem Push automatisch:
+**https://bwtv-report-weekly.vercel.app**
 
 Manuell:
 
@@ -62,9 +70,57 @@ python3 scripts/ingest_metricool.py /pfad/zur/payload.json
 # 2. Bauen, committen, veröffentlichen
 python3 scripts/publish.py
 
-# Nur bauen und Änderungen ansehen
+# 3. Benachrichtigung schicken
+python3 scripts/notify.py
+
+# Jeweils nur ansehen, nichts tun
 python3 scripts/publish.py --dry-run
+python3 scripts/notify.py --dry-run
 ```
+
+## Benachrichtigung einrichten (Chanty)
+
+**Chanty hat keine eigene API und keine eingehenden Webhooks.** Nachrichten lassen
+sich nur über einen Zwischendienst anlegen. Geprüft: In **Make** existiert kein
+Chanty-Paket. **Zapier** hat die Aktionen *Create a New Public Message* und
+*Create a New Private Message* — das ist der funktionierende Weg.
+
+Einmalig einzurichten:
+
+1. In Zapier einen Zap anlegen.
+2. Trigger: **Webhooks by Zapier → Catch Hook**. Zapier zeigt eine URL an.
+3. Action: **Chanty → Create a New Public Message**. Chanty-Konto verbinden,
+   Ziel-Konversation wählen, und als Nachrichtentext das Feld **`text`** aus dem
+   Trigger einsetzen.
+4. Die Webhook-URL lokal hinterlegen — **nicht** ins Repository:
+
+```bash
+echo 'https://hooks.zapier.com/hooks/catch/...' > .secrets/webhook_url
+```
+
+`.secrets/` ist per `.gitignore` ausgeschlossen. Alternativ die Umgebungsvariable
+`REPORT_WEBHOOK_URL` setzen; sie hat Vorrang.
+
+Das Skript schickt ein JSON mit den Feldern `text` (fertige Nachricht), `title`,
+`headline`, `url`, `dataDate`, `period`, `views`, `posts`, `interactions` und
+`viewsPerPost`. In Zapier lässt sich also entweder `text` direkt verwenden oder
+die Nachricht aus den Einzelfeldern zusammenbauen. Derselbe Aufbau funktioniert
+mit jedem anderen Dienst, der eine Webhook-URL entgegennimmt (Make, n8n, Slack).
+
+So sieht die Nachricht aus:
+
+```
+📊 BWTV Social-Media-Report ist aktualisiert – Stand 17.08.2026
+
+Weniger Reichweite, weil weniger veröffentlicht wurde.
+August 2026: 66.961 Aufrufe (−66,3 %) aus 50 Beiträgen.
+Facebook 2.163 Follower · Instagram 4.194 Follower.
+
+https://bwtv-report-weekly.vercel.app
+```
+
+Ohne hinterlegte URL bricht `notify.py` mit Exit-Code 2 und einem Hinweis ab —
+der Report wird trotzdem gebaut und veröffentlicht.
 
 Fortschritt im Terminal:
 
