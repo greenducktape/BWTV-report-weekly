@@ -3945,7 +3945,7 @@
       "instagram": {
         "views": 4441,
         "reach": 1297,
-        "interactions": 79,
+        "interactions": 80,
         "newFollowers": -1,
         "followers": 3824,
         "posts": 4,
@@ -4116,7 +4116,7 @@
       "instagram": {
         "views": 9869,
         "reach": 2925,
-        "interactions": 167,
+        "interactions": 169,
         "newFollowers": 2,
         "posts": 7,
         "accountsEngaged": 168,
@@ -4134,10 +4134,10 @@
     },
     "2026-10-05": {
       "facebook": {
-        "views": 474,
+        "views": 490,
         "profileViews": 3,
         "newFollowers": 0,
-        "followers": 2167,
+        "followers": 2166,
         "posts": 0,
         "interactions": 0,
         "reachPerPost": 0
@@ -4203,13 +4203,53 @@
         "reachPerPost": 0
       },
       "instagram": {
-        "views": 7207,
-        "reach": 511,
+        "views": 7959,
+        "reach": 563,
         "interactions": 0,
         "newFollowers": 6,
         "followers": 3783,
         "posts": 5,
-        "accountsEngaged": 188
+        "accountsEngaged": 208
+      }
+    },
+    "2026-10-09": {
+      "facebook": {
+        "views": 30,
+        "profileViews": 1,
+        "newFollowers": 0,
+        "followers": 2166,
+        "posts": 0,
+        "interactions": 0,
+        "reachPerPost": 0
+      },
+      "instagram": {
+        "views": 1633,
+        "reach": 218,
+        "interactions": 0,
+        "newFollowers": -2,
+        "followers": 3781,
+        "posts": 0,
+        "accountsEngaged": 43
+      }
+    },
+    "2026-10-10": {
+      "facebook": {
+        "views": 16,
+        "profileViews": 0,
+        "newFollowers": 0,
+        "followers": 2165,
+        "posts": 0,
+        "interactions": 0,
+        "reachPerPost": 0
+      },
+      "instagram": {
+        "views": 3183,
+        "reach": 71,
+        "interactions": 0,
+        "newFollowers": -1,
+        "followers": 3780,
+        "posts": 0,
+        "accountsEngaged": 93
       }
     }
   }
