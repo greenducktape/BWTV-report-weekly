@@ -4265,7 +4265,7 @@
       "instagram": {
         "views": 9873,
         "reach": 2980,
-        "interactions": 76,
+        "interactions": 77,
         "newFollowers": 1,
         "followers": 3781,
         "posts": 3,
@@ -4305,7 +4305,7 @@
       "instagram": {
         "views": 3766,
         "reach": 1333,
-        "interactions": 39,
+        "interactions": 40,
         "newFollowers": -2,
         "followers": 3781,
         "posts": 3,
@@ -4320,12 +4320,12 @@
         "followers": 2164,
         "posts": 2,
         "interactions": 38,
-        "reachPerPost": 217
+        "reachPerPost": 218
       },
       "instagram": {
         "views": 4807,
         "reach": 1273,
-        "interactions": 152,
+        "interactions": 158,
         "newFollowers": -1,
         "followers": 3780,
         "posts": 5,
@@ -4359,13 +4359,13 @@
         "newFollowers": 0,
         "followers": 2163,
         "posts": 3,
-        "interactions": 135,
+        "interactions": 136,
         "reachPerPost": 332.5
       },
       "instagram": {
         "views": 9914,
         "reach": 2444,
-        "interactions": 244,
+        "interactions": 247,
         "newFollowers": 3,
         "followers": 3779,
         "posts": 4,
@@ -4385,7 +4385,7 @@
       "instagram": {
         "views": 11900,
         "reach": 3178,
-        "interactions": 138,
+        "interactions": 140,
         "newFollowers": 0,
         "followers": 3779,
         "posts": 4,
@@ -4405,7 +4405,7 @@
       "instagram": {
         "views": 7906,
         "reach": 2240,
-        "interactions": 115,
+        "interactions": 118,
         "newFollowers": 5,
         "followers": 3784,
         "posts": 4,
@@ -4454,7 +4454,7 @@
     },
     "2026-10-21": {
       "facebook": {
-        "views": 38,
+        "views": 42,
         "profileViews": 3,
         "newFollowers": 0,
         "followers": 2164,
@@ -4494,18 +4494,18 @@
     },
     "2026-10-23": {
       "facebook": {
-        "views": 510,
+        "views": 548,
         "profileViews": 11,
         "newFollowers": 0,
         "followers": 2164,
         "posts": 2,
         "interactions": 32,
-        "reachPerPost": 205.5
+        "reachPerPost": 220.5
       },
       "instagram": {
         "views": 7325,
         "reach": 1917,
-        "interactions": 116,
+        "interactions": 126,
         "newFollowers": -5,
         "followers": 3768,
         "posts": 6,
@@ -4543,13 +4543,73 @@
         "reachPerPost": 0
       },
       "instagram": {
-        "views": 2521,
-        "reach": 794,
+        "views": 2658,
+        "reach": 831,
         "interactions": 0,
         "newFollowers": -3,
         "followers": 3765,
         "posts": 1,
-        "accountsEngaged": 22
+        "accountsEngaged": 24
+      }
+    },
+    "2026-10-26": {
+      "facebook": {
+        "views": 529,
+        "profileViews": 13,
+        "newFollowers": 0,
+        "followers": 2164,
+        "posts": 4,
+        "interactions": 18,
+        "reachPerPost": 173
+      },
+      "instagram": {
+        "views": 5407,
+        "reach": 1456,
+        "interactions": 126,
+        "newFollowers": -3,
+        "followers": 3762,
+        "posts": 5,
+        "accountsEngaged": 91
+      }
+    },
+    "2026-10-27": {
+      "facebook": {
+        "views": 707,
+        "profileViews": 9,
+        "newFollowers": 0,
+        "followers": 2164,
+        "posts": 3,
+        "interactions": 0,
+        "reachPerPost": 0
+      },
+      "instagram": {
+        "views": 5351,
+        "reach": 1480,
+        "interactions": 32,
+        "newFollowers": -4,
+        "followers": 3758,
+        "posts": 3,
+        "accountsEngaged": 83
+      }
+    },
+    "2026-10-28": {
+      "facebook": {
+        "views": 828,
+        "profileViews": 9,
+        "newFollowers": 0,
+        "followers": 2164,
+        "posts": 1,
+        "interactions": 1,
+        "reachPerPost": 0
+      },
+      "instagram": {
+        "views": 3404,
+        "reach": 1288,
+        "interactions": 39,
+        "newFollowers": -3,
+        "followers": 3755,
+        "posts": 2,
+        "accountsEngaged": 66
       }
     }
   }
