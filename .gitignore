@@ -5,3 +5,4 @@ __pycache__/
 
 # Zugangsdaten – niemals committen
 .secrets/
+scratchpad/
