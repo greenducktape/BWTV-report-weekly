@@ -4500,12 +4500,12 @@
         "followers": 2164,
         "posts": 5,
         "interactions": 33,
-        "reachPerPost": 235
+        "reachPerPost": 236
       },
       "instagram": {
         "views": 7325,
         "reach": 1917,
-        "interactions": 136,
+        "interactions": 135,
         "newFollowers": -5,
         "followers": 3768,
         "posts": 6,
@@ -4560,7 +4560,7 @@
         "followers": 2164,
         "posts": 6,
         "interactions": 21,
-        "reachPerPost": 194
+        "reachPerPost": 195
       },
       "instagram": {
         "views": 5407,
@@ -4665,7 +4665,7 @@
       "instagram": {
         "views": 2865,
         "reach": 1305,
-        "interactions": 53,
+        "interactions": 54,
         "newFollowers": -6,
         "followers": 3745,
         "posts": 2,
@@ -4685,7 +4685,7 @@
       "instagram": {
         "views": 3938,
         "reach": 1180,
-        "interactions": 43,
+        "interactions": 46,
         "newFollowers": -1,
         "followers": 3744,
         "posts": 4,
@@ -4745,7 +4745,7 @@
       "instagram": {
         "views": 3824,
         "reach": 1617,
-        "interactions": 56,
+        "interactions": 57,
         "newFollowers": 2,
         "followers": 3742,
         "posts": 2,
@@ -4814,10 +4814,10 @@
     },
     "2026-11-08": {
       "facebook": {
-        "views": 95,
+        "views": 98,
         "profileViews": 0,
         "newFollowers": 0,
-        "followers": 2163,
+        "followers": 2162,
         "posts": 4,
         "interactions": 0,
         "reachPerPost": 0
@@ -4837,10 +4837,10 @@
         "views": 159,
         "profileViews": 7,
         "newFollowers": 0,
-        "followers": 2163,
+        "followers": 2161,
         "posts": 3,
         "interactions": 4,
-        "reachPerPost": 111
+        "reachPerPost": 114
       },
       "instagram": {
         "views": 4063,
@@ -4883,8 +4883,8 @@
         "reachPerPost": 0
       },
       "instagram": {
-        "views": 785,
-        "reach": 270,
+        "views": 786,
+        "reach": 271,
         "interactions": 0,
         "newFollowers": 0,
         "followers": 3744,
@@ -4901,6 +4901,66 @@
         "posts": 0,
         "interactions": 0,
         "reachPerPost": 0
+      },
+      "instagram": {
+        "views": 375,
+        "reach": 138,
+        "interactions": 0,
+        "newFollowers": -8,
+        "followers": 3736,
+        "posts": 0,
+        "accountsEngaged": 4
+      }
+    },
+    "2026-11-13": {
+      "facebook": {
+        "views": 33,
+        "profileViews": 5,
+        "newFollowers": 0,
+        "followers": 2163,
+        "posts": 1,
+        "interactions": 0,
+        "reachPerPost": 0
+      },
+      "instagram": {
+        "views": 1754,
+        "reach": 548,
+        "interactions": 0,
+        "newFollowers": -26,
+        "followers": 3710,
+        "posts": 2,
+        "accountsEngaged": 26
+      }
+    },
+    "2026-11-14": {
+      "facebook": {
+        "views": 549,
+        "profileViews": 15,
+        "newFollowers": 0,
+        "followers": 2162,
+        "posts": 8,
+        "interactions": 10,
+        "reachPerPost": 125
+      },
+      "instagram": {
+        "views": 8648,
+        "reach": 1493,
+        "interactions": 48,
+        "newFollowers": -7,
+        "followers": 3703,
+        "posts": 8,
+        "accountsEngaged": 75
+      }
+    },
+    "2026-11-15": {
+      "instagram": {
+        "views": 2843,
+        "reach": 775,
+        "interactions": 0,
+        "newFollowers": -1,
+        "followers": 3702,
+        "posts": 0,
+        "accountsEngaged": 27
       }
     }
   }
